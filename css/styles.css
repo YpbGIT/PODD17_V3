@@ -1,0 +1,93 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    overflow: hidden; /* Aucun défilement */
+}
+
+* {
+    box-sizing: border-box; /* La largeur et la hauteur incluent le padding et la bordure */
+}
+
+#main-container {
+    display: grid;
+    grid-template-columns: 250px 1fr; /* Colonne de menu fixe à 250px et le reste pour le contenu */
+    height: 100vh;
+    overflow: hidden; /* Aucun défilement */
+}
+
+#menu-container {
+    background-color: #003366;
+    padding: 10px;
+    color: white;
+    height: 100%;
+    overflow-y: auto; /* Permet un défilement vertical si nécessaire */
+}
+
+#links-container h1 {
+    font-size: 1.5rem; /* Taille de police réduite */
+    margin-bottom: 10px;
+}
+
+#links-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#links-container li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 5px;
+    margin: 5px 0; /* Marges verticales réduites */
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s ease;
+}
+
+#links-container li a:hover {
+    background-color: #0055b3;
+    transform: translateX(5px);
+}
+
+#cube-container {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: calc(100vh - 50px); /* Ajustement de la hauteur */
+    margin-top: 10px; /* Espace réduit au-dessus du conteneur */
+}
+
+iframe {
+    border: none;
+    width: 100%;
+    height: 100%; /* Prend toute la hauteur disponible */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.banner-container {
+    width: 100%; /* Bannière prenant toute la largeur disponible */
+    height: 50px; /* Hauteur fixe pour la bannière */
+    display: flex;
+    justify-content: center; /* Centre les éléments de la bannière horizontalement */
+    align-items: center; /* Centre les éléments de la bannière verticalement */
+    margin-bottom: 10px; /* Espacement après la bannière */
+}
+
+.cube-logo img {
+    transition: transform 0.3s, filter 0.3s;
+    cursor: pointer;
+    width: 100%; /* Les images de logo prennent toute la largeur du conteneur */
+    max-width: 80px; /* Largeur maximale pour les images de logo */
+    margin: 1px auto; /* Espacement vertical réduit et centrage horizontal */
+}
+
+.cube-logo:hover img {
+    transform: scale(1.1);
+    filter: brightness(1.5);
+}
